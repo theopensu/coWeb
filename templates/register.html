@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block content %}
+<form method="POST">
+  <div class="form-group mx-3">
+    <label class="sr-only" for="inlineFormInputGroupUsername">Nume Utilizator</label>
+    <div class="field">
+      <div class="d-flex align-items-center input-floating-label text-blue-m1 brc-blue-m2">
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <div class="input-group-text"><i class="fa fa-user text-grey-m2 ml-n4"></i></div>
+          </div>
+          <input name="username" type="text" id="inlineFormInputGroupUsername" class="form-control form-control-sm pr-4 shadow-none" placeholder="Nume Utilizator" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="form-group mx-3">
+    <label class="sr-only" for="inlineFormInputGroupPassword">Parola</label>
+    <div class="field">
+      <div class="d-flex align-items-center input-floating-label text-blue-m1 brc-blue-m2">
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <div class="input-group-text"><i class="fa fa-key text-grey-m2 ml-n4"></i></div>
+          </div>
+          <input name="password" type="password" id="inlineFormInputGroupPassword" class="form-control form-control-sm pr-4 shadow-none" placeholder="Parola Min 6 caractere alphanumerice" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <center>
+    <h6>* nu este nevoie de adresa eMail <br>
+      * nu aveti nevoie de Credit/Debit Card <br>
+      * nu trebuie sa oferiti informatii ca caracter personal </h6>
+  </center>
+  <div class="dropdown-footer text-center py-25 bgc-default-l4 border-t-1 brc-default-l2">
+    <button type="submit" class="btn btn-sm px-4 py-15 text-95 btn-warning">
+      Inregistrare
+    </button>
+  </div>
+</form>
+{% endblock content %}

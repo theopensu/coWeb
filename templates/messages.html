@@ -1,0 +1,229 @@
+{% block content %}
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.7/dist/semantic.min.css">
+<script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.7/dist/semantic.min.js"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/5.5.2/bootbox.min.js"></script>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static' ,filename = 'style.css')}}">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.0.4/socket.io.js" integrity="sha512-aMGMvNYu8Ue4G+fHa359jcPb1u+ytAF+P2SCb+PxrjCdO3n3ZTxJ30zuH39rimUggmTwmh2u7wvQsDTHESnmfQ==" crossorigin="anonymous"></script>
+
+{% block scripts %}
+{{ moment.include_moment() }}
+{% endblock %}
+<div class="ui sixteen column grid">
+  <div class="sixteen wide computer column">
+    <div style="margin-left:20px; margin-right:50px; margin-top:10px; margin-bottom:10px;" class="ui grid">
+      <div class="sixteen column row">
+        <div class="left floated column">
+          <div class="ui buttons">
+            <a href={{ url_for('.messages') }}>
+              <button class="small ui button green">Inbox</button>
+            </a>
+            {% if not messages %}
+            <div class="or"></div>
+            <a href={{ url_for('.sendmessage') }}>
+              <button class="small ui button blue">
+                <center><i class="edit icon"></i></center>
+              </button>
+            </a>
+            {% endif %}
+          </div>
+        </div>
+        <div class="right floated column">
+          <div class="ui buttons">
+            <a href={{ url_for('.logout') }}>
+              <button class="small ui button orange">Iesire</button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="ui container" id="threads">
+      {% for message in messages %}
+      {% if message.thread_id in unread_threads_list %}
+      {% set unread_thread_class = "ui green segment" %}
+      {% set unread_thread_cir_class = "green circle icon" %}
+      {% else %}
+      {% set unread_thread_class = "ui segment" %}
+      {% set unread_thread_cir_class = " circle outline icon" %}
+      {% endif %}
+      <div id="{{ message.thread_id }}">
+        <a href='{{ url_for('.messages', thread_id=message.thread_id) }}'>
+          <div style="margin-left:25px;" id="{{ message.thread_id+'_thread_notify' }}" class="{{ unread_thread_class }}" style="white-space:nowrap; overflow: hidden; text-overflow: ellipsis;">
+            <div style="margin-left:25px;">
+              <div class="sixteen wide computer column">
+                <table class="ui single line table">
+                  <thead>
+                    <tr>
+                      <th>Status</th>
+                      <th>De la</th>
+                      <th>Subiect</th>
+                      <th>Trimis</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        {% if unread_thread_class ==  "ui green segment" and unread_thread_cir_class == "green circle icon" %}
+                        <i id="{{ message.thread_id+'_thread_notify_cir' }}" class="{{ unread_thread_cir_class }}"></i>
+                        <i class="orange envelope icon"></i>
+                        <b>Nou</b> |
+                        <i class="black eye icon"></i> Necitit
+                        {% else %}
+                        <i id="{{ message.thread_id+'_thread_notify_cir' }}" class="{{ unread_thread_cir_class }}"></i>
+                        <i class="black envelope open icon"></i>
+                        <b>Vechi</b> |
+                        <i class="green eye icon"></i>
+                        Citit
+                        {% endif %}
+                      </td>
+                      <td>
+                        <div style="margin-top:5px; margin-bottom:5px;" class="top aligned content"> <i class="address card outline icon"></i>
+                          {{ message.sender_id | safe }} a trimis catre Dvs {{ message.recipient_id | safe }}
+                        </div>
+                      </td>
+                      <td>
+                        <div style="margin-top:5px; margin-bottom:5px;" class="middle aligned content"><i class="pencil alternate icon"></i>
+                          {{ message.subject | safe }}
+                        </div>
+                      </td>
+                      <td>
+                        <div style="margin-top:5px; margin-bottom:5px;" class="bottom aligned content"><i class="clock icon"></i>
+                          {{ moment(message.timestamp).fromNow() }}
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </a>
+        <br>
+      </div>
+      {% endfor %}
+      {% if not messages %}
+      <br>
+      <center>
+        <div id="no_messages_notify">Pentru a achizitiona versiunea Premium contactati adminul alexsintaxecf@gmail.com
+        <a href={{ url_for('.sendmessage') }}>
+          <button class="small ui button blue">
+            <center><i class="edit icon"></i></center>
+          </button>
+        </a>
+        </div>
+    </center>
+      {% else %}
+      <center>
+        <div id="no_messages_notify" style="display:none;">Pentru a achizitiona versiunea Premium contactati adminul alexsintaxecf@gmail.com
+        <a href={{ url_for('.sendmessage') }}>
+          <button class="small ui button blue">
+            <center><i class="edit icon"></i></center>
+          </button>
+        </a>
+        </div>
+    </center>
+      {% endif %}
+    </div>
+    {% if fetch_button == 'true' %}
+    <center>
+      <br>
+      <button id="fetch_button" class="circular icon ui blue button" onclick="fetch_threads()">Incarca mai multe!</button>
+      {% endif %}
+    </center>
+  </div>
+</div>
+<div style="height:600px;"></div>
+<hr>
+{% include "footer.html" %}
+<div style="height:20px;"></div>
+
+
+
+<script>
+  var socket = io.connect('/messages', {
+    rememberTransport: false
+  })
+
+  //New message listener
+  socket.on("{{ current_user.websocket_id+'_newmsg' }}", function(data) {
+    socket_fetch = $.ajax({
+      method: 'GET',
+      url: "{{ url_for('.message_socket')}}" + '?url=' + data.message_url
+    });
+
+    socket_fetch.done(function(responseObject) {
+      $('#' + responseObject.thread_id).remove();
+      $('#threads').prepend(responseObject.thread);
+      $('.mail').addClass("orange")
+      $('#no_messages_notify').hide()
+      flask_moment_render_all()
+    })
+
+  });
+  ////////
+
+  //Thread deletion listener
+  socket.on("{{ current_user.websocket_id+'_notify_deletion' }}", function(data) {
+    if (data.type == 'thread') {
+      $('#' + data.thread_id).remove();
+
+      if (data.total_threads < 5) {
+        $('#fetch_button').remove();
+      }
+      if (data.total_threads == 0) {
+        $('#no_messages_notify').show()
+      }
+    }
+  })
+  ////////
+
+
+  //Mailbox orange notify and read/unread thread updater.
+  socket.on("{{ current_user.websocket_id+'_notify' }}", function(data) {
+    if (data.type == 'mailbox' && data.notify == 'false') {
+      $('.mail').removeClass("orange")
+    }
+    if (data.type == 'thread' && data.notify == 'false') {
+      $('#' + data.thread_id + '_thread_notify').attr('class', 'ui segment')
+      $('#' + data.thread_id + '_thread_notify_cir').attr('class', 'circle outline icon')
+    }
+
+  })
+  ////////
+
+
+  //Handles loading of older threads.
+  window['page'] = 2
+
+  function fetch_threads() {
+    fetch_threads_ajax = $.ajax({
+      method: "GET",
+      url: "{{ url_for('.messages')+'?page=' }}" + page
+    })
+
+    fetch_threads_ajax.done(
+      function(responseObject) {
+        if (responseObject.status == 200) {
+          $(responseObject.threads).appendTo("#threads")
+          window['page'] = window['page'] + 1
+
+          if (responseObject.fetch_button == 'false') {
+            $('#fetch_button').remove();
+          }
+
+        }
+      })
+  }
+  ////////
+</script>
+
+
+
+{% endblock %}

@@ -1,0 +1,492 @@
+<head>
+	<title>sintaxe.cf</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/5.5.2/bootbox.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static' ,filename = 'style.css')}}">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+	<!-- Start Script Cookies-uri -->
+	<script type="text/javascript">
+		bootbox.prompt({
+			title: "Website-ul sintaxe.cf foloseste cookies-uri!",
+			inputType: 'radio',
+			inputOptions: [{
+					text: 'Accept',
+					value: '1',
+				},
+				{
+					text: 'Nu accept si voi parasi acest website!',
+					value: '2',
+				}
+			],
+			callback: function(result) {
+				console.log(result);
+			}
+		});
+	</script>
+	<!-- Start Script Cookies-uri -->
+	<div class="container">
+		<div class="col-lg-6 d-none d-lg-block">
+			<div style="height:200px;"></div>
+		</div>
+		<!-- Start Antet Pagina -->
+		<div class="row">
+			<div class="d-none d-sm-block col-md-12 d-lg-none">
+				<div style="height:25px;"></div>
+			</div>
+			<div class="d-none d-sm-block col-md-12 col-lg-2">
+				<h2>
+					<a href="index.html"><span class="badge badge-pill badge-primary">sintaxe.cf</span></a>
+				</h2>
+			</div>
+			<div class="d-none d-sm-block col-md-12 col-lg-5">
+				<span class="badge badge-danger">Reclama</span>
+				<div class="img-thumbnail img-fluid">
+					<center>
+						<p> <b>Website static sau dinamic?</b> <br>
+							<b>Acum de la 30 Euro/pagina</b>
+						</p>
+					</center>
+					<center>
+						<a href="#myoffer" data-toggle="modal"><span class="badge badge-pill badge-success">
+								<i class="fas fa-thumbs-up" style="font-size: 1em; color:black" title="Super Oferta de la 30 Euro/pagina!"></i>
+								Apasa Aici!</span></a>
+					</center>
+				</div>
+			</div>
+			<div class="d-none d-sm-block col-md-12 col-lg-5">
+				<span class="badge badge-danger">Banner-ul Website-ului Tau Aici!</span>
+				<!-- Start Script Schimbare Banner - contor -->
+				<span class="badge badge-info" id="nrBnr"></span>
+				<!-- Stop Script Schimbare Banner - contor -->
+				<span class="badge badge-warning">Banner-e</span>
+				<a href="#addbnr" data-toggle="modal"><span class="badge badge-pill badge-primary">Adauga banner-ul tau!</span></a>
+				<span>
+				</span>
+				<div class="img-thumbnail img-fluid">
+					<center>
+						<!-- Start Script Schimbare Banner -->
+						<script type="text/javascript">
+							var random_img = new Array();
+							random_img[0] = '<a href="http://0.0.0.0:8000" target="_blank"><img src="static/img/bnr.png" class="img-fluid"></a>';
+							var total_images = random_img.length;
+							var random_number = Math.floor((Math.random() * total_images));
+							document.write(random_img[random_number]);
+							document.getElementById("nrBnr").innerHTML = random_img.length;
+						</script>
+						<!-- Stop Script Schimbare Banner -->
+					</center>
+				</div>
+			</div>
+		</div>
+		<!-- Stop Antet Pagina -->
+		<!-- Start Continut Pagina -->
+		<div class="row">
+			<div class="d-none d-sm-block col-md-4 col-lg-2">
+				<div style="height:20px;"></div>
+				<!-- Start Pagina Partea Stanga - Panou Profil -->
+				<div class="card-deck">
+					<div class="card">
+						<!-- Start poza Profil sursa Gravatar -->
+						<img class="card-img-top img-fluid" src="https://s.gravatar.com/avatar/%20%20sample" alt="Avatar Utilizator" height="155">
+						<!-- Stop poza Profil sursa Gravatar -->
+						<div class="card-body">
+							<!-- Start nume Profil -->
+							<p class="card-text"><i class="fas fa-user" style="color:black" title="Nume"></i> Alex</p>
+							<!-- Stop nume Profil -->
+							<!-- Start tara Profil -->
+							<p class="card-text"><i class="fas fa-globe" style="color:black" title="Tara"></i> Romania</p>
+							<!-- Stop tara Profil -->
+							<!-- Start publicat Profil -->
+							<p class="card-text"><i class="far fa-calendar-alt" style="color:black" title="Publicat"></i> 30.11.2020</p>
+							<!-- Stop publicat Profil -->
+						</div>
+						<div class="card-footer">
+							<!-- Start Buton Like Profil - LikeBtn.com BEGIN -->
+							<span class="likebtn-wrapper" data-theme="github" data-lang="ro" data-rich_snippet="true" data-show_like_label="false" data-counter_type="subtract_dislikes" data-counter_frmt="km" data-counter_count="true"
+								data-tooltip_enabled="false"></span>
+							<!-- Stop Buton Like Profil - LikeBtn.com BEGIN -->
+							<!-- Start Script Buton Like Profil - LikeBtn.com BEGIN -->
+							<script>
+								(function(d, e, s) {
+									if (d.getElementById("likebtn_wjs")) return;
+									a = d.createElement(e);
+									m = d.getElementsByTagName(e)[0];
+									a.async = 1;
+									a.id = "likebtn_wjs";
+									a.src = s;
+									m.parentNode.insertBefore(a, m)
+								})(document, "script", "//w.likebtn.com/js/w/widget.js");
+							</script>
+							<!-- Stop Script Buton Like Profil - LikeBtn.com END -->
+						</div>
+					</div>
+				</div>
+				<!-- Stop Pagina Partea Stanga - Panou Profil -->
+			</div>
+			<!-- Start Pagina Partea Centrala - Panou Profil 2 -->
+			<div class="d-none d-sm-block col-md-8 col-lg-4">
+				<div style="height:22px;"></div>
+				<div>
+					<div class="card">
+						<div class="card-body">
+							<!-- Start Buton Link GitHub -->
+							<h6 class="card-title">
+								<a href="https://github.com/theopensu/" target="_blank">
+									<span class="badge badge-dark">
+										<i class="fab fa-github" style="font-size: 2em; color:white" title="Cont GitHub"></i>
+									</span>
+								</a>
+								<span class="badge badge-dark">GitHub</span>
+							</h6>
+							<!-- Stop Buton Link GitHub -->
+						</div>
+					</div>
+					<div style="height:15px;"></div>
+					<div class="row">
+						<div class="col-auto">
+							<!-- Start Buton Modal Vloguri -->
+							<a href="#myModal" data-toggle="modal"><span class="badge badge-pill badge-warning">Vloguri</span></a>
+							<!-- Stop Buton Modal Vloguri -->
+						</div>
+						<div class="col-auto">
+							<!-- Start Buton Modal URL-uri -->
+							<a href="#myURList" data-toggle="modal"><span class="badge badge-pill badge-dark">
+									URL-uri
+								</span></a>
+							<!-- Stop Buton Modal URL-uri -->
+						</div>
+						<div class="col-auto">
+							<!-- Start Buton Modal Portofoliu -->
+							<a href="#portofoliu" data-toggle="modal"><span class="badge badge-pill badge-primary">Portofoliu</span></a>
+							<!-- Stop Buton Modal Portofoliu -->
+						</div>
+					</div>
+					<!-- Autentificare/Inregistrare -->
+					<div class="d-none d-sm-block d-lg-none">
+					  <div style="height:20px;"></div>
+					  <span class="badge badge-danger">Contacteaza-ma</span>
+							<div style="height:20px;"></div>
+								<center>
+									<div class="container">
+										<span class="badge badge-pill badge-warning">
+											Resolutia insuficienta! Nu puteti folosi Sistemul de Mesagerie Interna!
+										</span>
+											<div style="height:10px;"></div>
+										<span class="badge badge-pill badge-danger">
+											Conectati-va de pe tableta/laptop/pc!
+										</span>
+											<div style="height:10px;"></div>
+											<span class="badge badge-pill badge-info">
+												Sau ma puteti gasi la adresa de eMail: <b>alexsintaxecf@gmail.com</b>
+											</span>
+									</div>
+								</center>
+					</div>
+					<!-- Stop Banner Ledger vizibil in resolutii medii -->
+				</div>
+			</div>
+			<!-- Stop Pagina Partea Centrala - Panou Profil 2 -->
+			<!-- Start Pagina Rotire - 2 Banner vizibila in modul resolutiilor mici -->
+			<div class="d-block d-sm-none">
+				<div style="height:200px;"></div>
+				<center><img src="static/img/rd.png" class="img-fluid" width="100" height="10" alt="Rotiti Device-ul">
+					<div class="container">
+						<span class="badge badge-pill badge-warning">
+							Resolutia insuficienta! Rotiti device-ul!
+						</span>
+						<span class="badge badge-pill badge-danger">
+							Conectati-va de pe tableta/laptop/pc!
+						</span>
+					</div>
+				</center>
+			</div>
+			<!-- Stop Pagina Rotire - Banner vizibila in modul resolutiilor mici -->
+			<!-- Start Partea dreapta Pagina - 2 Banner-e Ledger vizibile in modul resolutiilor mari -->
+			<div class="col-lg-6 d-none d-lg-block">
+				<div style="height:20px;"></div>
+				<span class="badge badge-primary">Contacteaza-ma</span> | <a href="{{ url_for('register') }}">
+				<span class="badge badge-warning">Inregistrare</span></a>
+					<center>
+						<div style="height:35px;"></div>
+						{% block content %}
+						{% endblock %}
+						</center>
+			</div>
+			<!-- Stop Partea dreapta Pagina - 2 Banner-e Ledger vizibile in modul resolutiilor mari -->
+			<!-- Start Subsol Pagina - vizibila in modul resolutiilor mari - linie subsol ce desparte subsolul paginii de continutul paginii -->
+			<div class="col-lg-12 d-none d-lg-block">
+				<hr>
+			</div>
+			<!-- Stop Subsol Pagina - vizibila in modul resolutiilor mari - linie subsol ce desparte subsolul paginii de continutul paginii -->
+		</div>
+
+		<div class="d-none d-sm-block d-lg-none">
+			<hr>
+		</div>
+		<!-- Stop Continut Pagina -->
+	</div>
+	<!-- Start Modal Lista Vloguri -->
+	<div class="modal" id="myModal">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<!-- Start Titlu Lista Vloguri -->
+				<div class="modal-header">
+					<h4 class="modal-title"><span class="badge badge-pill badge-warning">
+							Vloguri
+						</span></h4>
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+				</div>
+				<!-- Stop Titlu Lista Vloguri -->
+				<!-- Start Lista Vloguri -->
+				<div class="modal-body">
+					<div class="container">
+						<!-- Start Vlog default -->
+						<p>
+							<span class="badge badge-pill badge-primary">1</span> <b>Website Static Gratis</b>
+							<a href="#" target="_blank">&nbsp;
+								<i class="fab fa-youtube-square" style="font-size: 2em; color:red" title="Website Static Gratis"></i>
+							</a>
+						</p>
+						<!-- Stop Vlog default -->
+					</div>
+				</div>
+				<!-- Stop Lista Vloguri -->
+			</div>
+		</div>
+	</div>
+	<!-- Stop Modal Lista Vloguri -->
+	<!-- Start Modal Lista URL-uri -->
+	<div class="modal" id="myURList">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<!-- Start Titlu Lista URL-uri -->
+				<div class="modal-header">
+					<h4 class="modal-title"><span class="badge badge-pill badge-dark">
+							URL-uri
+						</span></h4>
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+				</div>
+				<!-- Stop Titlu Lista URL-uri -->
+				<!-- Start Lista URL-uri -->
+				<div class="modal-body">
+					<div class="container">
+						<!-- Start URL default -->
+						<p>
+							<span class="badge badge-pill badge-primary">1</span> <b>sintaxe.cf</b>
+							<a href="#" target="_blank">&nbsp;
+								<i class="fas fa-globe" style="font-size: 1em; color:green" title="sintaxe.cf este un website verificat"></i>
+							</a>
+						</p>
+						<!-- Stop URL default -->
+					</div>
+				</div>
+				<!-- Stop Lista URL-uri -->
+			</div>
+		</div>
+	</div>
+	<!-- Stop Modal Lista URL-uri -->
+	<!-- Start Modal Lista Portofoliu -->
+	<div class="modal" id="portofoliu">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<!-- Start Titlu Lista Portofoliu -->
+				<div class="modal-header">
+					<h4 class="modal-title"><span class="badge badge-pill badge-primary">
+							Portofoliu
+						</span></h4>
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+				</div>
+				<!-- Stop Titlu Lista Portofoliu -->
+				<!-- Start Lista Portofoliu -->
+				<div class="modal-body">
+					<div class="container">
+						<!-- Start Web static -->
+						<p>
+							<span class="badge badge-pill badge-primary">1</span> <b>Cod Sursa - Website Static - HTML5 </b>
+							<a href="#" target="_blank">&nbsp;
+								<i class="fab fa-github" style="font-size: 2em; color:black" title="Cod Sursa - Website Static Gratis"></i>
+							</a>
+							<span class="badge badge-pill badge-success">Gratis</span>
+							<a href="#"><span class="badge badge-pill badge-danger">Demo</span></a>
+							<span><i class="fab fa-bitcoin fa-2x" style="color:orange" title="Faceti o donatie in BTC daca vreti noi actualizari ale acestui proiect"></i></span>
+						</p>
+						<!-- Stop Web static -->
+						<!-- Start Django App -->
+						<p>
+							<span class="badge badge-pill badge-primary">2</span> <b>Cod Sursa - Django Blog App - Python </b>
+							<a href="#" target="_blank">&nbsp;
+								<i class="fab fa-github" style="font-size: 2em; color:black" title="Cod Sursa - Django Blog App - Python "></i>
+							</a>
+							<span class="badge badge-pill badge-success">Gratis</span>
+							<a href="#"><span class="badge badge-pill badge-danger">Demo</span></a>
+							<span><i class="fab fa-bitcoin fa-2x" style="color:orange" title="Faceti o donatie in BTC daca vreti noi actualizari ale acestui proiect"></i></span>
+						</p>
+						<!-- Stop Django App -->
+						<!-- Start Django App -->
+						<p>
+							<span class="badge badge-pill badge-primary">3</span> <b>Cod Sursa - Flask SilkRoad App - Python </b>
+							<a href="#" target="_blank">&nbsp;
+								<i class="fab fa-github" style="font-size: 2em; color:black" title="Cod Sursa - Flask SilkRoad Alternative App - Python"></i>
+							</a>
+							<span class="badge badge-pill badge-success">Gratis</span>
+							<a href="#"><span class="badge badge-pill badge-danger">Demo</span></a>
+							<span><i class="fab fa-bitcoin fa-2x" style="color:orange" title="Faceti o donatie in BTC daca vreti noi actualizari ale acestui proiect"></i></span>
+						</p>
+						<!-- Stop Django App -->
+					</div>
+				</div>
+				<!-- Stop Lista Portofoliu -->
+			</div>
+		</div>
+	</div>
+	<!-- Stop Modal Lista Portofoliu -->
+	<!-- Start Modal Adauga Banner -->
+	<div class="modal" id="addbnr">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<!-- Start Titlu Adaug Banner -->
+				<div class="modal-header">
+					<h4 class="modal-title"><span class="badge badge-pill badge-warning">
+							Adauga un Banner cu link catre website-ul tau!
+						</span></h4>
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+				</div>
+				<!-- Stop Titlu Adaug Banner -->
+				<!-- Start Reguli Adaug Banner -->
+				<div class="modal-body">
+					<div class="container">
+						<!-- Start Adaug Banner default -->
+						<p> <b><span class="badge badge-primary">Varianta 1</span></b>
+						</p>
+						<p>
+							Daca faceti o donatie <b>a echivalentului unui Euro in BTC</b>, website-ul dvs va fi automat adaugat in lista
+							<span class="badge badge-pill badge-dark">URL-uri</span> pentru o perioada de timp nelimitata!
+						</p>
+						<p> <b><span class="badge badge-success">Varianta 2</span></b>
+						</p>
+						<p>
+							Daca faceti o donatie <b>a echivalentului a 10 Euro in BTC</b>, website-ul dvs va fi automat adaugat in lista
+							<span class="badge badge-pill badge-dark">URL-uri</span> si banner-ul website-ului dvs in antetul paginii in partea dreapta pentru o perioada de timp nelimitata!
+						</p>
+						<p>
+							<b>Cerinte Banner:</b>
+						<ol>
+							<li>Dimensiune: <b>430px X 70px</b></li>
+							<li>Tipul fisierului: <b>png sau gif</b></li>
+						</ol>
+						</p>
+						<p>
+							<b>Cerinte adaugare in <span class="badge badge-pill badge-dark">URL-uri</span> si Banner cu link :</b>
+						<ol>
+							<li>Trimiteti un eMail la adresa:</li>
+							<a id="showImage"><i class="far fa-eye" title="Arata adresa de eMail"></i></a>
+							<img id="theImage" src="static/img/email.png">
+							<li>Includeti: url-ul website-ului dvs(ex. https://site.com), domeniul de activitate(ex.reparatii tv), banner-ul(daca optati pentru varianta 2)</li>
+							<li>Adaugati codul de mai jos in subsolul paginii dvs, acest cod trebuie sa fie permanent in subsolulu paginii principale a website-ului dvs daca doriti ca toate link-urile dvs sa fie pe o perioada nelimitata pe website-ul sintaxe.cf:
+							</li>
+							<div style="height:15px;"></div>
+							<div class="img-thumbnail">
+								<a href="#" target="_blank"><img width=500 alt="sintaxe.cf" src="static/img/bnr.png" class="img-fluid"></a>
+							</div>
+							<div style="height:15px;"></div>
+							<center>
+								<textarea rows="3" cols="40"><a href="#" target="_blank"><img width=500 alt="sintaxe.cf" src="static/img/bnr.png" class="img-fluid"></a>
+								</textarea>
+							</center>
+							<li>Intr-un interval de cca 24-48 de ore veti primi un raspuns catre ce adresa de BTC sa faceti donatia</b></li>
+							<li>Dupa ce s-a confirmat donatia in maxim 1 ora veti putea vedea website-ul dvs listat in sectiunea <span class="badge badge-pill badge-dark">URL-uri</span> si banner-ul adaugat in antet</li>
+						</ol>
+						</p>
+						<!-- Stop Adaug Banner default -->
+					</div>
+				</div>
+				<!-- Stop Reguli Adaug Banner -->
+			</div>
+		</div>
+	</div>
+	<!-- Stop Modal Adauga Banner -->
+	<!-- Start Modal Oferta -->
+	<div class="modal" id="myoffer">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<!-- Start Titlu Oferta -->
+				<div class="modal-header">
+					<h4 class="modal-title"><span class="badge badge-pill badge-success">
+							Super oferta de la 30 Euro/pagina!
+						</span></h4>
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+				</div>
+				<!-- Stop Titlu Oferta -->
+				<!-- Start Oferta -->
+				<div class="modal-body">
+					<div class="container">
+						<!-- Start URL default -->
+						<p>
+							Realizez si modific website-uri statice sau dinamice de la <b>30 Euro/pagina</b> in functie de complexitatea task-ului, pentru upgrade baze de date pretul porneste de la <b>150 Euro</b>, de exemplu in functie de baza de date si de cate
+							elemente vor fi adaugate/inlaturate.
+						</p>
+						<p>Dockerizare aplicatii <b>de la 100 Euro</b> in functie de complexitatea task-ului.</p>
+						<p>Aplicatii in framework-urile Flask si Django <b>de la 500 de Euro</b> </p>
+						<p>Implementare Bitcoin Payment Gateway in aplicatii noi sau deja existente <b>de la 150 Euro</b> </p>
+						<a id="f1">Contactati-ma la aceasta adresa! Apasa ...<i class="far fa-eye"></i></a>
+						<img id="eml" src="static/img/email.png">
+						<script>
+							document.getElementById("f1").onclick = function() {
+								document.getElementById("eml").style.visibility = "visible";
+							}
+						</script>
+						<!-- Stop URL default -->
+					</div>
+				</div>
+				<!-- Stop Oferta -->
+			</div>
+		</div>
+	</div>
+	<!-- Stop Modal Oferta-->
+	<!-- Start Subsol Pagina -->
+	<footer>
+		<div class="container d-none d-sm-block">
+			<div class="float-left">
+				<h6><span class="badge badge-dark badge-pill"><b>&copy; <script>
+								document.write(new Date().getFullYear())
+							</script> <i class="fas fa-at" style="color:yellow"></i> sintaxe.cf</b></span></h6>
+			</div>
+			<div class="float-right">
+				<h6><i class="fa fa-lock" style="color:green" title="Certificat SSL Activ"></i> |
+				<span> <a href="#">Termeni&Conditii</a> </span> |
+				<span> <a href="#">Politica de Confidentialitate</a> </span> |
+				<span> <a href="#">FAQ</a> </span> |
+				<span> <a href="#">ANPC</a> </span> |
+				<span> <a href="#">SOL</a> </span></h6>
+			</div>
+		</div>
+		<!-- Start Float Button Subsol Pagina -->
+		<a href="#" class="float" id="menu-share">
+			<div style="height:20px;"></div>
+			<i class="fas fa-envelope"></i>
+		</a>
+		<ul>
+			<li>
+					<center>
+						alexsintaxecf@gmail.com
+					</center>
+			</li>
+		</ul>
+		<!-- Start Float Button Subsol Pagina -->
+		<script>
+			document.getElementById("showImage").onclick = function() {
+				document.getElementById("theImage").style.visibility = "visible";
+			}
+		</script>
+	</footer>
+	<!-- Stop Subsol Pagina -->
+</body>
+
+</html>
