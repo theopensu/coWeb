@@ -38,6 +38,7 @@ Dupa care deschideti un Browser Web (Chrome, Firefox, Brave ...) si introduceti 
 ```sh
 http://127.0.0.1:8000
 ```
+![](demo.gif)
 
 Daca ati urmat toate instructiunle de pana acum in Browser-ul Web ar trebui sa se deschida aplicatia. In partea dreapta aveti sectiunea Autentificare Inregistrare, apasati pe Butonul Galben Inregistrare si primul utilizator trebuie sa fie **admin** cu parola dvs secreta, dupa care veti fi redirectionat automat catre pagina de Autentificare, introduceti detaliile de autentificare si apasati pe Butonul Autentificare, automat veti fi redirectionat catre pagina mesaje.
 
