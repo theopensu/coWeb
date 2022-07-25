@@ -5,6 +5,7 @@
 ###### Website-ul Afacerii Mele este o platforma web pe care o puteti instala oriunde va doriti pe un VPS si o puteti rula in mai putin de 5 min de la momentul achizitionarii.
 Website-ul este structurat dupa cum urmeaza:
 
+Vezi Veriunea [Demo](https://sintaxe.cf/) Live Online!
 Pagina Start
 - sectiunea unde sunt prezentate serviciile oferite
 - sectiunea Profil
