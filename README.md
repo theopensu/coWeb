@@ -6,6 +6,7 @@
 Website-ul este structurat dupa cum urmeaza:
 
 Vezi Veriunea [Demo](https://sintaxe.cf/) Live Online!
+
 Pagina Start
 - sectiunea unde sunt prezentate serviciile oferite
 - sectiunea Profil
