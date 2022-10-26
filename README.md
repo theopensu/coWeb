@@ -5,7 +5,7 @@
 ###### Website-ul Afacerii Mele este o platforma web pe care o puteti instala oriunde va doriti pe un VPS si o puteti rula in mai putin de 5 min de la momentul achizitionarii.
 Website-ul este structurat dupa cum urmeaza:
 
-Pentru a achizitiona acest website pentru afacerea ta te rog sa ne [contactezi](https://www.digisol.ro/user/profile/347)
+Pentru a achizitiona acest website pentru afacerea ta te rog sa ma [contactezi](https://www.digisol.ro/user/profile/347)
 
 Vezi Veriunea [Demo](https://sintaxe.cf/) Live Online!
 
