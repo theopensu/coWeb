@@ -50,16 +50,10 @@ In acelasi mod creeati un alt sau alti utilizatori pentru a incerca versiunea De
 
 Pentru personalizarea tuturor paginilor va puteti adresa unui web designer cu experienta sau o puteti face chiar dvs daca aveti cunostinte minime HTML si CSS, de asemenea in limita timpului liber va stau la dispozitie contracost de la 30 Euro/Pagina.
 
-Primii 10 clienti care vor achizitiona Licenta pe o perioada mai lunga de 12 luni vor primii aplicatia web licentiata pe viata/domeniu (ex.avocatIonesc.ro), Costul/licenta este de la 5 Euro/luna (cu TVA inclus) cu plata in cont bancar, automat vi se genereaza factura.
-
-Costul unei licente lunare de folosire a aplicatiei este de 5 Euro/Luna cu TVA inclus, se emite automat factura.
+Costul unei licente lunare de folosire a aplicatiei este de 5 Euro/Luna cu TVA inclus(obligatoriu plata in avans pe 12 luni), se emite automat factura.
 
 Taxa schimbare domeniu pentru o licenta 15 Euro.
 
 Taxa instalare pe VPS 35 Euro
 
 Aplicatia se poate instala pe orice VPS!
-
-Taxa consultanta alegere VPS optimizat (ex. Serverless) 15 Euro
-
-Adresa de eMail pentru contact este alexsintaxecf@gmail.com
