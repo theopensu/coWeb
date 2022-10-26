@@ -54,6 +54,4 @@ Costul unei licente lunare de folosire a aplicatiei este de 5 Euro/Luna cu TVA i
 
 Taxa schimbare domeniu pentru o licenta 15 Euro.
 
-Taxa instalare pe VPS 35 Euro
-
 Aplicatia se poate instala pe orice VPS!
