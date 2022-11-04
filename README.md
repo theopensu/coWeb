@@ -48,10 +48,10 @@ Daca ati urmat toate instructiunle de pana acum in Browser-ul Web ar trebui sa s
 
 In acelasi mod creeati un alt sau alti utilizatori pentru a incerca versiunea Demo, puteti folosi optinea din Web Browser - New Private Window, autentificandu-va cu admin intr-un Web Browser si cu un alt Utilizator in celalalt Web Browser si trimiteti mesaje pentru a vedea exact cum functioneaza.
 
-Pentru personalizarea tuturor paginilor va puteti adresa unui web designer cu experienta sau o puteti face chiar dvs daca aveti cunostinte minime HTML si CSS, de asemenea in limita timpului liber va stau la dispozitie contracost de la 30 Euro/Pagina.
+Pentru personalizarea tuturor paginilor va puteti adresa unui web designer cu experienta sau o puteti face chiar dvs daca aveti cunostinte minime HTML si CSS, de asemenea in limita timpului liber va stau la dispozitie contracost de la 50 Euro/Pagina.
 
-Costul unei licente lunare de folosire a aplicatiei este de 5 Euro/Luna cu TVA inclus(obligatoriu plata in avans pe 12 luni), se emite automat factura.
+Costul unei licente de folosire a aplicatiei este de 10 Euro/Licenta/Domeniu cu TVA inclus, se emite automat factura.
 
-Taxa schimbare domeniu pentru o licenta 15 Euro.
+Taxa schimbare domeniu pentru o licenta 10 Euro.
 
 Aplicatia se poate instala pe orice VPS!
